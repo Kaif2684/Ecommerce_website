@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Empire</title>
+    <style>
+        /* Styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hero-section {
+            width: 100%;
+            height: 250px;
+            background-color: #57bece;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .product-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .product-container {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            overflow-x: auto;
+            padding: 20px;
+        }
+        .product-card {
+            flex: 0 0 25%;
+            margin: 20px;
+            width: 200px;
+            height: 250px;
+            background-color: #57bece;
+            border: 5px solid #afee56;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .collection-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .collection {
+            margin: 20px;
+            width: 200px;
+            height: 250px;
+            background-color: #40bce2;
+            border: 5px solid #afee56;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        footer {
+            padding: 20px;
+            background-color: #902323;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .footer-title, .info {
+            margin: 20px 0;
+            text-transform: capitalize;
+        }
+        .footer-social-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-link {
+            color: #fff;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+        .footer-credit {
+            width: 100%;
+            padding: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            color: #666;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .faq-item .question {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq-item .answer {
+            display: none;
+            margin-top: 10px;
+        }
+        .faq-item .answer.open {
+            display: block;
+        }
+        .active {
+            color: #fff;
+            background-color: #333;
+        }
+        .quick-view-btn, .add-to-cart-btn, .view-cart-btn, .checkout-btn, .wishlist-btn, .my-wishlist-btn, .login-btn, .sign-up-btn, .user-dashboard-btn, .contact-us-btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- hero section -->
+    <header class="hero-section">
+        <div class="content">
+            <h1>Spice Empire</h1>
+            <p>Experience the flavor of the world</p>
+        </div>
+    </header>
+
+    <!-- product slider -->
+    <section class="product-slider">
+        <div class="product-container">
+            <div class="product-card">
+                <h2><a href="product1.html">Turmeric Powder</a></h2>
+                <p>$5.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product2.html">Cumin Seeds</a></h2>
+                <p>$4.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product3.html">Garam Masala</a></h2>
+                <p>$6.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product4.html">Coriander Powder</a></h2>
+                <p>$5.49</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product5.html">Red Chili Powder</a></h2>
+                <p>$4.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product6.html">Cinnamon Sticks</a></h2>
+                <p>$6.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product7.html">Cardamom Pods</a></h2>
+                <p>$7.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h2><a href="product8.html">Ginger Powder</a></h2>
+                <p>$5.99</p>
+                <button class="quick-view-btn">Quick View</button>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- collections -->
+    <section class="collections">
+        <h2>Featured Collections</h2>
+        <div class="collection-container">
+            <div class="collection">
+                <h3><a href="collection1.html">Spices A-Z</a></h3>
+                <p>120+ Spice Varieties</p>
+            </div>
+            <div class="collection">
+                <h3><a href="collection2.html">Exotic Spices</a></h3>
+                <p>10+ Exotic Spice Varieties</p>
+            </div>
+            <div class="collection">
+                <h3><a href="collection3.html">Spice Blends</a></h3>
+                <p>20+ Ready-to-use Spice Blends</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-title">Contact Us</div>
+        <div class="info">1234 Spice Street, Flavortown, FL, 12345</div>
+        <div class="info">+1 (555) 123-4567</div>
+        <div class="info">contact@spiceempire.com</div>
+        <div class="footer-social-container">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+        </div>
+        <div class="footer-credit">
+            © 2024 Spice Empire. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Navbar active link functionality
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            const navbarLinks = navbar.querySelectorAll('a');
+            navbarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const currentLink = document.querySelector('.active');
+                    if (currentLink) {
+                        currentLink.classList.remove('active');
+                    }
+                    link.classList.add('active');
+                });
+            });
+        }
+
+        // Search form functionality
+        const searchForm = document.querySelector('.search-form');
+        if (searchForm) {
+            const searchInput = searchForm.querySelector('input');
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    // Implement search functionality here
+                    console.log('Searching for:', searchTerm);
+                }
+            });
+        }
+
+        // Quick view and add to cart functionality
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach(card => {
+            const quickViewBtn = card.querySelector('.quick-view-btn');
+            quickViewBtn.addEventListener('click', () => {
+                // Implement quick view functionality here
+                console.log('Quick view for:', card.querySelector('h2 a').innerText);
+            });
+
+            const addToCartBtn = card.querySelector('.add-to-cart-btn');
+            addToCartBtn.addEventListener('click', () => {
+                // Implement add to cart functionality here
+                console.log('Added to cart:', card.querySelector('h2 a').innerText);
+            });
+        });
+
+        // FAQ Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item .question');
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const answer = item.nextElementSibling;
+                    answer.classList.toggle('open');
+                });
+            });
+        });
+
+        // Button functionalities (placeholders for actual implementations)
+        document.querySelectorAll('.view-cart-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('View Cart button clicked');
+                // Implement view cart functionality here
+            });
+        });
+
+        document.querySelectorAll('.checkout-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Checkout button clicked');
+                // Implement checkout functionality here
+            });
+        });
+
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Add to Wishlist button clicked');
+                // Implement add to wishlist functionality here
+            });
+        });
+
+        document.querySelectorAll('.my-wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('My Wishlist button clicked');
+                // Implement my wishlist functionality here
+            });
+        });
+
+        document.querySelectorAll('.login-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Login button clicked');
+                // Implement login functionality here
+            });
+        });
+
+        document.querySelectorAll('.sign-up-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Sign Up button clicked');
+                // Implement sign up functionality here
+            });
+        });
+
+        document.querySelectorAll('.user-dashboard-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('User Dashboard button clicked');
+                // Implement user dashboard functionality here
+            });
+        });
+
+        document.querySelectorAll('.contact-us-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Contact Us button clicked');
+                // Implement contact us functionality here
+            });
+        });
+    </script>
+</body>
+</html>
